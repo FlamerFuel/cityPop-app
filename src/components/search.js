@@ -1,6 +1,6 @@
 import React from 'react';
 
-function search() {
+function search(props) {
 	return (
 		<section className="searchBox-wrap">
 			<h2>SEARCH BY CITY</h2>
@@ -8,6 +8,7 @@ function search() {
 				type="text"
 				placeholder="Enter a city here..."
 				className="searchBox"
+				onChange={props.handleInput}
 			/>
 			<button>SEARCH</button>
 		</section>
