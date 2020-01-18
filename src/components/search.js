@@ -1,14 +1,15 @@
 import React from 'react';
 
-function search(props) {
+function search({ handleInput, search }) {
 	return (
 		<section className="searchBox-wrap">
-			<h2>SEARCH BY CITY</h2>
+			<h2>SEARCH FOR A CITY</h2>
 			<input
 				type="text"
 				placeholder="Enter a city here..."
 				className="searchBox"
-				onChange={props.handleInput}
+				onChange={handleInput}
+				onKeyPress={search}
 			/>
 			<button>SEARCH</button>
 		</section>
