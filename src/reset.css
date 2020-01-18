@@ -192,6 +192,12 @@ select {
 	vertical-align: middle;
 }
 
+input {
+	border: none;
+	outline: none;
+	background: none;
+}
+
 html {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;

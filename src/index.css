@@ -1,9 +1,4 @@
-* {
-	/* I en större app använder jag inte "*" då det kan bli för tungt */
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
+/********** HEADER ************/
 
 body {
 	font-family: 'montserrat', 'sans-serif';
@@ -21,8 +16,9 @@ header h1 {
 	text-align: center;
 }
 
+/********** MAIN ************/
+
 main {
-	min-height: 200px;
 	background-color: #333;
 	width: 100%;
 	max-width: 960px;
@@ -30,22 +26,25 @@ main {
 	border-radius: 15px;
 }
 
+section h2 {
+	padding: 15px;
+	color: #fff;
+	font-size: 2em;
+	font-weight: 300;
+	text-align: center;
+}
+
 section {
 	padding: 15px;
 }
 
-.searchBox-wrap {
-	width: 100%;
+/********** SEARCH ************/
+input {
+	text-align: center;
 }
 
-.searchBox-wrap h2,
-.searchBox-wrap p {
-	display: block;
-	width: 50%;
-	padding-top: 20px;
-	margin: auto;
-	color: #888;
-	border-right: solid 1px #888;
+.searchBox-wrap {
+	width: 100%;
 }
 
 .searchBox {
@@ -53,9 +52,15 @@ section {
 	width: 50%;
 	margin: auto;
 	padding: 15px;
-	border: none;
-	outline: none;
-	background: none;
 	background-color: #fff;
 	border-radius: 10px;
+	transition: 0.3s ease-in;
+}
+
+.searchBox:focus {
+	box-shadow: 0 0 8px 3px rgb(100, 100, 200);
+}
+
+.searchBox:hover {
+	box-shadow: 0 0 8px 3px rgb(100, 100, 200);
 }
