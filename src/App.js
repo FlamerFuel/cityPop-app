@@ -12,15 +12,14 @@ function App() {
 	});
 	// api base url as a variable
 	const apiurl =
-		//	'http://api.geonames.org/search?username=weknowit&type=json&maxRows=3&style=LONG&orderby=population';
-		'http://www.omdbapi.com/?i=tt3896198&apikey=743f4ebf&type';
+		'http://api.geonames.org/search?username=weknowit&type=json&maxRows=3&style=LONG&orderby=population';
+	// 'http://www.omdbapi.com/?i=tt3896198&apikey=743f4ebf&type';
 
 	// listen for keyboard "Enter"
 	const search = (e) => {
 		if (e.key === 'Enter') {
-			axios(apiurl + '&s=' + state.s).then(({ data }) => {
-				console.log(data);
-				let results = data.Search;
+			axios(apiurl + '&q=' + state.s).then(({ data }) => {
+				let results = data.geonames;
 
 				setState((prevState) => ({ ...prevState, results: results }));
 			});

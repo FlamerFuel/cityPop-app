@@ -6,7 +6,7 @@ function results({ results }) {
 	return (
 		<section className="results">
 			{results.map((result) => (
-				<Result result={result} />
+				<Result key={result.geoNamesID} result={result} />
 			))}
 		</section>
 	);
