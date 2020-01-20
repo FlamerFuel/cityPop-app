@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import Search from './components/search';
+import Results from './components/results';
 
 function App() {
 	// default values for state
@@ -11,18 +12,22 @@ function App() {
 	});
 	// api base url as a variable
 	const apiurl =
-		'http://api.geonames.org/search?username=weknowit&maxRows=10&style=LONG&orderby=population&type=json';
+		//	'http://api.geonames.org/search?username=weknowit&type=json&maxRows=3&style=LONG&orderby=population';
+		'http://www.omdbapi.com/?i=tt3896198&apikey=743f4ebf&type';
 
 	// listen for keyboard "Enter"
 	const search = (e) => {
 		if (e.key === 'Enter') {
-			axios(apiurl + '&name_equals=' + state.s).then((data) => {
+			axios(apiurl + '&s=' + state.s).then(({ data }) => {
 				console.log(data);
+				let results = data.Search;
+
+				setState((prevState) => ({ ...prevState, results: results }));
 			});
 		}
 	};
 
-	// listens for input typing and handle value "as s"
+	// listens for input typing and handle value as "s"
 	const handleInput = (e) => {
 		let s = e.target.value;
 
@@ -39,6 +44,7 @@ function App() {
 			</header>
 			<main>
 				<Search handleInput={handleInput} search={search} />
+				<Results results={state.results} />
 			</main>
 		</div>
 	);

@@ -64,3 +64,13 @@ input {
 .searchBox:hover {
 	box-shadow: 0 0 8px 3px rgb(100, 100, 200);
 }
+
+/********** RESULTS ************/
+div.result h3,
+div.result p {
+	color: #fff;
+	padding: 0px;
+}
+div.result hr {
+	margin: 30px 0;
+}
