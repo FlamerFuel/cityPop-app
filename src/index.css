@@ -1,117 +1,17 @@
-/********** HEADER ************/
-
-body {
-	font-family: 'montserrat', 'sans-serif';
-	background-color: #222;
+.app {
+	min-height: 100vh;
+	background-color: rgb(93, 218, 218);
+	display: flex;
+	justify-content: space-around;
 }
 
-header {
-	padding: 3em 0em;
-}
-
-header h1 {
-	color: #fff;
-	font-size: 3em;
-	font-weight: 500;
-	text-align: center;
-}
-
-/********** MAIN ************/
-
-main {
-	width: 100%;
-	max-width: 960px;
-	margin: auto;
-	padding: 20px; /* so that we can find main in inspect*/
-	margin-bottom: 60px;
-}
-
-section {
-	margin: auto;
-	padding: 5px;
-}
-
-/********** SEARCH ************/
-input {
-	text-align: center;
-}
-
-.searchBox-wrap {
-	width: 100%;
-	margin-bottom: 30px;
-}
-
-.searchBox-wrap h2 {
-	margin-bottom: 20px;
-	color: #fff;
-	font-size: 1.4em;
-	font-weight: 300;
-	text-align: center;
-}
-
-.searchBox {
-	display: block;
-	width: 60%;
-	margin: auto;
-	padding: 15px;
+.boxes {
+	height: 250px;
+	width: 250px;
 	background-color: #fff;
-	border-radius: 10px;
-	transition: 0.3s ease-in;
-}
-
-.searchBox:focus {
-	box-shadow: 0 0 8px 3px rgb(100, 100, 200);
-	width: 66%;
-}
-
-.searchBox:hover {
-	box-shadow: 0 0 8px 3px rgb(100, 100, 200);
-	width: 66%;
-}
-
-/********** RESULT(S) ************/
-
-.result {
-	padding: 25px 5px;
-	background-color: #333;
 	border-radius: 15px;
-	margin-bottom: 25px;
-}
-
-.frame {
-	width: 100%;
-	max-width: 300px;
-	margin: auto;
-	padding: 5px;
-	border: solid 1px #fff;
-	border-radius: 5px;
-}
-
-.result h3,
-.frame p {
-	text-align: center;
-	color: #fff;
-	margin: 0px;
-}
-
-.result h3 {
-	padding-bottom: 20px;
-}
-
-.frame p {
-	padding: 10px;
-}
-
-.results hr {
-	width: 80%;
-	margin: 15px auto;
-}
-
-.frame p:last-child {
-	font-size: 200%;
-}
-
-/* tar bort sista linjen */
-.result:last-child hr {
-	display: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }

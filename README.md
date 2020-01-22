@@ -1,3 +1,25 @@
+## Documantation
+
+Located in the parent directory "/citypop/documentation".
+
+1. project spec
+2. wireframe
+
+## Project starts with a single page master
+
+First commit in master is a simple "under contruction" wireframe
+
+## development
+
+In branch development. All Commits are at functional progress.
+When 2 commits are at simular time stamp, the second one is usualy a bug-fix. Call the second commit. Notes should clarify.
+
+## Launches
+
+When development reaches functionality and can be launched, development is merged back to master.
+
+##
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
