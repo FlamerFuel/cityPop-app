@@ -1,15 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Boxes from './components/boxes';
 
 // detta blir en component
 
 function App() {
+	const [isRed, setRed] = useState(false);
+	const [count, setCount] = useState(0);
+
+	const increment = () => {
+		setCount(count + 1);
+		setRed(!isRed);
+	};
+
 	return (
 		<div className="app">
-			<Boxes header="header 1" texts="random texts goes here 1" />
-			<Boxes header="header 2" texts="random texts goes here 2" />
-			<Boxes header="header 3" texts="random texts goes here 3" />
-			<Boxes header="header 4" texts="random texts goes here 4" />
+			<div className="boxes">
+				<h1 className={isRed ? 'red' : ''}>Change the color!</h1>
+				<button onClick={increment}>Count!</button>
+				<h1>{count}</h1>
+			</div>
 		</div>
 	);
 }

@@ -18,8 +18,6 @@ When 2 commits are at simular time stamp, the second one is usualy a bug-fix. Ca
 
 When development reaches functionality and can be launched, development is merged back to master.
 
-##
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
