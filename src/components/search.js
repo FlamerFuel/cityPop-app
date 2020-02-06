@@ -6,7 +6,7 @@ function search({ handleInput, search }) {
 			<h2>SEARCH FOR A COUNTRY OR CITY</h2>
 			<input
 				type="text"
-				placeholder="Search for a country or city here..."
+				placeholder="Type a country or city... "
 				className="searchBox"
 				onChange={handleInput}
 				onKeyPress={search}
